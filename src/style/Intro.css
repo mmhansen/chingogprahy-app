@@ -1,0 +1,28 @@
+.introCard {
+  background-color: #fff;
+  margin:0 0 60px;
+  box-shadow: 0 0 100px -20px rgba(0,0,0,.2);
+}
+
+.header-bar {
+  padding: 20px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: white;
+  background: linear-gradient(45deg, #662d8c, #ed1e79);
+  background: -webkit-linear-gradient(45deg,#662d8c,#ed1e79);
+}
+
+.dash {
+  margin: 0 20px;
+}
+
+.intro-body {
+  padding: 20px;
+  line-height: 1.75;
+}
+
+.link-text {
+  color: inherit;
+  text-decoration: none;
+}

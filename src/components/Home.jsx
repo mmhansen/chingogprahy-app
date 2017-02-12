@@ -1,9 +1,12 @@
 import React, { PropTypes } from 'react'
+import Intro from './Intro'
 
-function Home() {
+function Home({ intros }) {
   return (
-    <div>
-      <h1>Welcome home!</h1>
+    <div className="container">
+      {
+        intros.map((intro, ix) => <Intro {...intro} key={intro._id} />)
+      }
     </div>
   )
 }
