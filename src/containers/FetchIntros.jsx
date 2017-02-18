@@ -13,7 +13,8 @@ export default function (ComposedComponent) {
       this.nextIntros = this.nextIntros.bind(this)
       this.state = {
         intros: [],
-        skip: 0
+        skip: 0,
+        count: 0
       }
     }
     componentWillMount () {
@@ -21,6 +22,17 @@ export default function (ComposedComponent) {
         .then(res => {
           this.setState({
             intros: res.data.intros
+          })
+        })
+        .catch(err => {
+          console.log(err)
+        })
+
+      axios.get(url+'/api/intro/count')
+        .then(res => {
+          console.log(res)
+          this.setState({
+            count: res.data.count
           })
         })
         .catch(err => {

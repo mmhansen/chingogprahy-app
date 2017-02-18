@@ -3,7 +3,7 @@ import IntroFormMethod from '../containers/IntroFormMethod'
 
 function IntroForm ({ handleSubmit, handleChange, title, body }) {
   return (
-    <div className="center">
+    <div className="center pb5">
       <form className="pa4 black-80">
         <div className="">
           <label htmlFor="name" className="f6 b db mb2">Title <span className="normal black-60">(optional)</span></label>
