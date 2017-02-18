@@ -23,7 +23,7 @@ export default function(ComposedComponent) {
         })
     }
     render() {
-      return <ComposedComponent {...this.state} />
+      return <ComposedComponent {...this.state} {...this.props} />
     }
   }
 }

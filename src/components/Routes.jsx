@@ -8,7 +8,7 @@ import Layout from './Layout'
 import Home from './Home'
 import OneIntro from './OneIntro'
 
-function Routes() {
+function Routes () {
   return (
     <Router history={browserHistory}>
       <Router path='/' components={Layout}>

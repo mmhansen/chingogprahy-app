@@ -1,14 +1,15 @@
 import React, { PropTypes } from 'react'
 import Navigation from './Navigation'
 import '../style/App.css'
+import HomeState from '../containers/HomeState'
 
-function Layout({ children }) {
+function Layout ({ children, openForm, formOpen }) {
   return (
     <div>
-      <Navigation />
-      { children }
+      <Navigation openForm={openForm} />
+      { React.cloneElement(children, {formOpen}) }
     </div>
   )
 }
 
-export default Layout
+export default HomeState(Layout)

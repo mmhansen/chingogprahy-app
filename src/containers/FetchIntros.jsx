@@ -13,7 +13,6 @@ export default function(ComposedComponent) {
     componentWillMount() {
       axios.get(url+'/api/intro')
         .then(res => {
-          console.log(res)
           this.setState({
             intros: res.data.intros
           })
@@ -23,7 +22,7 @@ export default function(ComposedComponent) {
         })
     }
     render() {
-      return <ComposedComponent {...this.state} />
+      return <ComposedComponent {...this.state} {...this.props} />
     }
   }
 }
