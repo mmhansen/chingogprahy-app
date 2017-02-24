@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Router, IndexRoute, browserHistory } from 'react-router'
 // higher order components
 import FetchIntros from '../containers/FetchIntros'

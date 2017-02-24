@@ -1,7 +1,7 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import Intro from './Intro'
 
-function OneIntro({ intro }) {
+function OneIntro ({ intro }) {
   return (
     <div className="container">
       <Intro {...intro} />

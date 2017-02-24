@@ -1,9 +1,9 @@
-import React, { PropTypes, Component } from 'react'
+import React, { Component } from 'react'
 import axios from 'axios'
 import { url } from '../config'
 
 const getIntros = (skip = 0) => {
-  return axios.get(url+'/api/intro?skip='+skip)
+  return axios.get(`${url}/api/intro?skip=${skip}`, { withCredentials: true })
 }
 
 export default function (ComposedComponent) {
@@ -30,7 +30,6 @@ export default function (ComposedComponent) {
 
       axios.get(url+'/api/intro/count')
         .then(res => {
-          console.log(res)
           this.setState({
             count: res.data.count
           })
@@ -41,7 +40,7 @@ export default function (ComposedComponent) {
     }
     nextIntros () {
       this.setState({
-        skip: this.state.skip += 10
+        skip: this.state.skip + 10
       })
       getIntros(this.state.skip)
         .then(res => {

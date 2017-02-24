@@ -20,6 +20,7 @@ export default function (ComposedComponent) {
     }
     handleSubmit () {
       console.log(this.state)
+      console.log(this.props)
       axios.post(url+'/api/intro', this.state)
         .then((res) => {
           console.log(res)
