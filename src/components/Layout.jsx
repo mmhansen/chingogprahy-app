@@ -3,11 +3,11 @@ import Navigation from './Navigation'
 import '../style/App.css'
 import HomeState from '../containers/HomeState'
 
-function Layout ({ children, openForm, formOpen, params }) {
+function Layout ({ children, openForm, formOpen, params, authenticated, ...props }) {
   return (
     <div>
-      <Navigation openForm={openForm} params={params} />
-      { React.cloneElement(children, {formOpen}) }
+      <Navigation openForm={openForm} params={params} authenticated={authenticated} />
+      { React.cloneElement(children, { formOpen, authenticated, ...props }) }
     </div>
   )
 }
