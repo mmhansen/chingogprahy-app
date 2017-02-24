@@ -12,7 +12,8 @@ export default function (ComposedComponent) {
       this.handleSubmit = this.handleSubmit.bind(this)
       this.state = {
         title: '',
-        body: ''
+        body: '',
+        cohort: ''
       }
     }
     handleChange (event) {
@@ -25,13 +26,16 @@ export default function (ComposedComponent) {
         ...this.state,
         author: this.props.user.username
       }
+      console.log(this.state)
       axios.post(`${url}/api/intro`, intro, { withCredentials: true })
         .then((res) => {
-          console.log(res)
           this.props.postMessage({
             type: 'success',
             body: res.data.body
           })
+          setTimeout(() => {
+            this.props.clearMessage()
+          }, 5000)
         })
         .catch((error) => {
           const messgage = Object.assign({}, error).response.data.body
@@ -39,6 +43,9 @@ export default function (ComposedComponent) {
             type: 'error',
             body: messgage
           })
+          setTimeout(() => {
+            this.props.clearMessage()
+          }, 5000)
         })
     }
     render () {

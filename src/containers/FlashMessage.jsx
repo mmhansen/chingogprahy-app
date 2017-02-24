@@ -4,7 +4,6 @@ import { connect } from 'react-redux'
 export default function (ComposedComponent) {
   class FlashMessage extends Component {
     render () {
-      console.log(this.props.message)
       const type = (this.props.message.type === 'error') ? 'red' : 'green'
       return (
         <div>
