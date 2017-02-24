@@ -5,5 +5,6 @@ module.exports = {
         "standard",
         "promise"
     ],
-    "semi": [1, "never"]
+    "semi": [1, "never"],
+    "no-multi-spaces": 2
 };

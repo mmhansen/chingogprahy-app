@@ -1,13 +1,18 @@
 import * as types from '../actions/statics'
 
 const initialState = {
-  user: {}
+  message: {
+    type: null,
+    body: null
+  }
 }
 
 export default function (state = initialState, action) {
   switch (action.type) {
-    case types.USER:
-      return {...state, user: action.payload}
+    case types.MESSAGE:
+      return {...state, message: action.payload}
+    case types.CLEAR_MESSAGE:
+      return initialState
     default:
       return state
   }
