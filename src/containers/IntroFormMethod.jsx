@@ -15,7 +15,7 @@ export default function (ComposedComponent) {
     }
     handleChange (event) {
       this.setState({
-        [event.target.name]: event.taget.value
+        [event.target.name]: event.target.value
       })
     }
     handleSubmit () {

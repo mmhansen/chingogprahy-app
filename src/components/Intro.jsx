@@ -12,7 +12,8 @@ function Intro({ _id, title, body, author, cohort, created_at }) {
       </div>
       <Link to={'/' + _id} className="link-text">
         <div className="intro-body">
-          { body }
+          <p className="b">{ title }</p>
+          <p>{ body }</p>
         </div>
       </Link>
     </div>

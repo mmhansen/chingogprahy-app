@@ -11,3 +11,13 @@ body {
   padding: 60px 10px 0;
   font-size: 19px;
 }
+
+
+.reset-input:focus {
+  outline: none
+}
+
+
+.resize {
+  resize: vertical;
+}
